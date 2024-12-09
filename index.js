@@ -1,5 +1,8 @@
 const express = require('express')
 const path = require('path')
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 const port = process.env.PORT || 5006
 
@@ -10,7 +13,16 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-  res.render('pages/index')
+  if (!process.env.STRATISAI_CHAT_BUBBLE_CONFIG_BASE64) {
+    res.status(400).send('STRATISAI_CHAT_BUBBLE_CONFIG_BASE64 is not set')
+    return
+  }
+
+  res.render('pages/index', {
+    SCRIPT_STRATISAI_CHAT_BUBBLE_CONFIG: Buffer.from(process.env.STRATISAI_CHAT_BUBBLE_CONFIG_BASE64, 'base64').toString(),
+    STRATISAI_CHAT_CLIENT_ID: process.env.STRATISAI_CHAT_CLIENT_ID,
+    STRATISAI_ORG_ID: process.env.STRATISAI_ORG_ID,
+  })
 })
 
 const server = app.listen(port, () => {

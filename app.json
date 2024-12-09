@@ -5,5 +5,11 @@
   "website": "https://elements.heroku.com/addons/stratisai",
   "logo": "https://admin.atlis.ai/logo-transparent.png",
   "image": "heroku/nodejs",
+  "env": {
+    "STRATISAI_CHAT_BUBBLE_CONFIG_BASE64": {
+      "description": "A base64 encoded chat bubble configuration for the Stratis AI agent.",
+      "required": true
+    }
+  },
   "keywords": ["node", "express", "stratis", "ai", "chat", "bubble", "heroku"]
 }

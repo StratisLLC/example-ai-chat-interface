@@ -1,66 +1,48 @@
-# node-js-getting-started
+# Stratis AI Agent Chat
 
-A barebones Node.js app using [Express](https://expressjs.com/).
+A sample Node.js application using Express and EJS that integrates the Stratis AI Agent Chat interface, deployed on Heroku.
 
-This application supports the tutorials for both the [Cedar and Fir generations](https://devcenter.heroku.com/articles/generations) of the Heroku platform. You can check them out here:
+## Features
 
-* [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-* [Getting Started on Heroku Fir with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs-fir)
+- **Stratis AI Agent Chat**: Embeds a chat interface for interacting with Stratis AI agents.
+- **Express.js**: Backend server handling routes and rendering views.
+- **EJS Templating**: Dynamic rendering of HTML pages.
+- **Heroku Deployment**: Easily deploy and manage your application on Heroku.
 
-## Running Locally
+## Prerequisites
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+- [Node.js](https://nodejs.org/) installed on your machine.
+- [Heroku CLI](https://cli.heroku.com/) installed for deploying to Heroku.
+- Stratis AI account with necessary credentials.
 
-```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
+## Installation
 
-Your app should now be running on [localhost:5006](http://localhost:5006/).
+1. **Provision the add-on:**
 
-## Deploying to Heroku
+   ```sh
+   heroku addons:create stratisai -a HEROKU_APP_NAME
+   ```
 
-Using resources for this example app counts towards your usage. [Delete your app](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-destroy) and [database](https://devcenter.heroku.com/articles/heroku-postgresql#removing-the-add-on) as soon as you are done experimenting to control costs.
+2. **Complete the add-on setup wizard:**
 
-### Deploy on [Cedar][cedar]
+   ```sh
+   heroku addons:open stratisai -a HEROKU_APP_NAME
 
-By default, apps use Eco dynos on [Cedar][cedar] if you are subscribed to Eco. Otherwise, it defaults to Basic dynos. The 
-Eco dynos plan is shared across all Eco dynos in your account and is recommended if you plan on deploying many small apps 
-to Heroku. Learn more about our low-cost plans [here](https://blog.heroku.com/new-low-cost-plans).
+   # step through the setup wizard to create your first agent and chat interface!
+   ```
 
-Eligible students can apply for platform credits through our new [Heroku for GitHub Students program](https://blog.heroku.com/github-student-developer-program).
+3. **Deploy your custom version of this application:**
 
-```
-$ heroku create
-$ git push heroku main
-$ heroku open
-```
+After creating your chat interface in the Stratis AI setup wizard, simply click the "Deploy to Heroku" button.
+This button will deploy a version of this application that already has the chat interface embedded into the HTML.
 
-### Deploy on [Fir][fir]
+## License
 
-By default, apps on [Fir][fir] use 1X-Classic dynos. To create an app on [Fir][fir] you'll need to 
-[create a private space](https://devcenter.heroku.com/articles/working-with-private-spaces#create-a-private-space)
-first.
+This project is licensed under the MIT License.
 
-```
-$ heroku spaces:create <space-name> --team <team-name> --generation fir
-$ heroku create --space <space-name>
-$ git push heroku main
-$ heroku open
-```
+## Helpful Links
 
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Getting Started on Heroku Fir with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs-fir)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
-
-[cedar]: https://devcenter.heroku.com/articles/generations#cedar
-[fir]: https://devcenter.heroku.com/articles/generations#fir
+- [Stratis AI Admin Site](https://admin.atlis.ai)
+- [Stratis AI Addon Page](https://elements.heroku.com/addons/stratisai)
+- [Stratis AI Addon Docs](https://devcenter.heroku.com/articles/stratisai)
+- [Heroku Dev Center](https://devcenter.heroku.com/)
