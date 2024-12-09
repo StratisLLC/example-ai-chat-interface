@@ -19,5 +19,6 @@
       "required": true
     }
   },
+  "success_url": "/",
   "keywords": ["node", "express", "stratis", "ai", "chat", "bubble", "heroku"]
 }
