@@ -1,8 +1,9 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
-  "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
+  "name": "Stratis AI Agent Chat Interface - Example",
+  "description": "An Example application to launch a preconfigured Stratis AI agent chat interface",
+  "repository": "https://github.com/StratisLLC/example-ai-chat-bubble",
+  "website": "https://elements.heroku.com/addons/stratisai",
+  "logo": "https://admin.atlis.ai/logo-transparent.png",
+  "image": "heroku/nodejs",
+  "keywords": ["node", "express", "stratis", "ai", "chat", "bubble", "heroku"]
 }
