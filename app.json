@@ -9,6 +9,14 @@
     "STRATISAI_CHAT_BUBBLE_CONFIG_BASE64": {
       "description": "A base64 encoded chat bubble configuration for the Stratis AI agent.",
       "required": true
+    },
+    "STRATISAI_CHAT_CLIENT_ID": {
+      "description": "The ID for the Stratis AI chat interface.",
+      "required": true
+    },
+    "STRATISAI_ORG_ID": {
+      "description": "The organization ID for the Stratis AI add-on instance.",
+      "required": true
     }
   },
   "keywords": ["node", "express", "stratis", "ai", "chat", "bubble", "heroku"]
