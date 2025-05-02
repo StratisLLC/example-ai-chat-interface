@@ -1,7 +1,7 @@
 {
   "name": "Stratis AI Agent Chat Interface - Example",
   "description": "An Example application to launch a preconfigured Stratis AI agent chat interface",
-  "repository": "https://github.com/StratisLLC/example-ai-chat-bubble",
+  "repository": "https://github.com/StratisLLC/example-ai-chat-interface",
   "website": "https://elements.heroku.com/addons/stratisai",
   "logo": "https://admin.atlis.ai/logo-transparent.png",
   "image": "heroku/nodejs",
