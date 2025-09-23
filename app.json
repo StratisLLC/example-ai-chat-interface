@@ -5,9 +5,6 @@
   "website": "https://elements.heroku.com/addons/stratisai",
   "logo": "https://admin.atlis.ai/logo-transparent.png",
   "image": "heroku/nodejs",
-  "scripts": {
-      "postdeploy": "node heroku-postdeploy.js"
-    },
   "env": {
     "STRATISAI_CHAT_BUBBLE_CONFIG_BASE64": {
       "description": "A base64 encoded chat bubble configuration for the Stratis AI agent.",
@@ -19,10 +16,6 @@
     },
     "STRATISAI_ORG_ID": {
       "description": "The organization ID for the Stratis AI add-on instance.",
-      "required": true
-    },
-    "STRATISAI_DEPLOYMENT_CALLBACK_URL": {
-      "description": "The URL to call when the deployment is complete.",
       "required": true
     }
   },
